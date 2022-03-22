@@ -14,8 +14,9 @@ the scaler that was used to scale the data to train the mode, and the number of 
 If you choose to use the code provided in this repositor, navigate to TremorGan file:
 	1. Load the model and scaler by using the "get_model" function.
 		a. The "get_model" function takes in the paths of the .h5 model and the .pickle scaler, respectively.
-			example: get_model("C:/Users/.../Desktop/PT_Net_10.h5", ""C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
-			Replace "..." with username.
+		example: get_model("C:/Users/.../Desktop/PT_Net_10.h5", ""C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
+		Replace "..." with username.
+		
 		b. model, scaler = get_model("C:/Users/.../Desktop/PT_Net_10.h5", ""C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
 	
 	2. Use the "generate_signal" function to generate n*m array of signals 
