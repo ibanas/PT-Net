@@ -5,24 +5,36 @@ Once done, you can then pip install the python module that will allow you to gen
 The python module can be installed as follows: "pip install TremorGan".
 https://pypi.org/project/TremorGan/
 
+or you can use the code provided in file "TremorGan"
+
+If you choose to install and use the python package, you have to load the model using load_model from tensorflow, and you have to load the pickled scaler.
 The function takes in the trained model, the length of the sequences of the time series data you want to generate,
 the scaler that was used to scale the data to train the mode, and the number of sequences you want to generate.
 
-The function returns a numpy array of size n*m.
-Where n is the number of sequences you want to generate.
-And m is the length of the sequence.
+If you choose to use the code provided in this repositor, navigate to TremorGan file:
+	1. Load the model and scaler by using the "get_model" function.
+		a. The "get_model" function takes in the paths of the .h5 model and the .pickle scaler, respectively.
+			example: get_model("C:/Users/.../Desktop/PT_Net_10.h5", ""C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
+			Replace "..." with username.
+		b. model, scaler = get_model("C:/Users/.../Desktop/PT_Net_10.h5", ""C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
+	
+	2. Use the "generate_signal" function to generate n*m array of signals 
 
-You can specify three sequence lengths: either 10, for 10 seconds
-						    	   or 5, for 5 seconds
-						    	   or 2, for 2 seconds
+
+		The function returns a numpy array of size n*m.
+		Where n is the number of sequences you want to generate.
+		And m is the length of the sequence.
+
+		You can specify three sequence lengths: either 2, for 2 seconds
+						    	    or 5, for 5 seconds
+						    	    or 10, for 10 seconds
 
 example on how to use the function.
 
-from TremorGan import *
 
-generated_sequences = generate_tremor(model, 10, scaler, 1000)
+generated_sequences = generate_signal(model, 10, scaler, 1000)
 
-# model: is the model you want to use, either PT-Net 2, PT-Net 5 or PT-Net 10.
+# model: is the model you want to use, either PT_Net_2, PT_Net_5 or PT_Net_10.
 # 10 refers to the length of the senquence(s) you want to generate. 
 # e.g. use 10 for 10 seconds long sequences if using PT-Net 10. or 5 for 5 seconds long sequence(s) if using PT-Net 5, etc.
 
