@@ -2,9 +2,9 @@ import numpy as np
 from Tensorflow.keras.models import load_model
 import pickle
 
-def get_model_scaler(h5_model_path, pickled_scaler_path):
-	model = load_model(h5_model)
-	with open(ickled_scaler_path, 'rb') as sc:
+def load_model_scaler(h5_model_path, pickled_scaler_path):
+	model = load_model(h5_model_path)
+	with open(pickled_scaler_path, 'rb') as sc:
 		scaler = pickle.load(sc)
 	return model, scaler
 
