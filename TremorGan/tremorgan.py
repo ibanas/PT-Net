@@ -1,5 +1,5 @@
 import numpy as np
-from Tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 import pickle
 
 def load_model_scaler(h5_model_path, pickled_scaler_path):
