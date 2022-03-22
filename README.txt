@@ -12,23 +12,23 @@ The function takes in the trained model, the length of the sequences of the time
 the scaler that was used to scale the data to train the mode, and the number of sequences you want to generate.
 
 If you choose to use the code provided in this repositor, navigate to TremorGan file:
-	1. Load the model and scaler by using the "load_model_scaler" function.
-		a. The "load_model_scaler" function takes in the paths of the .h5 model and the .pickle scaler, respectively.
-		example: load_model_scaler("C:/Users/.../Desktop/PT_Net_10.h5", "C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
-		Replace "..." with username.
+1. Load the model and scaler by using the "load_model_scaler" function.
+	a. The "load_model_scaler" function takes in the paths of the .h5 model and the .pickle scaler, respectively.
+	example: load_model_scaler("C:/Users/.../Desktop/PT_Net_10.h5", "C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
+	Replace "..." with username.
 		
-		b. model, scaler = load_model_scaler("C:/Users/.../Desktop/PT_Net_10.h5", "C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
+	b. model, scaler = load_model_scaler("C:/Users/.../Desktop/PT_Net_10.h5", "C:/Users/.../Desktop/PT_Net_10_scaler.pickle")
 	
-	2. Use the "generate_signal" function to generate n*m array of signals 
+2. Use the "generate_signal" function to generate n*m array of signals 
 
 
-		The function returns a numpy array of size n*m.
-		Where n is the number of sequences you want to generate.
-		And m is the length of the sequence.
+The function returns a numpy array of size n*m.
+Where n is the number of sequences you want to generate.
+And m is the length of the sequence.
 
-		You can specify three sequence lengths: either 2, for 2 seconds
-						    	    or 5, for 5 seconds
-						    	    or 10, for 10 seconds
+You can specify three sequence lengths: either 2, for 2 seconds
+					    or 5, for 5 seconds
+					    or 10, for 10 seconds
 
 example on how to use the function.
 
