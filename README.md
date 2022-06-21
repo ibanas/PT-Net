@@ -1,5 +1,5 @@
 
-# Project Title
+# PT-Net
 
 To use PT-Net, select the model and its respective scaler that you would like to use and download them to your prefered directory.
 
